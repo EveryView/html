@@ -1,0 +1,262 @@
+@font-face {
+font-family: Quadranta;
+src: url("../fonts/Quadranta-Regular.otf") format("opentype");
+}
+
+@font-face {
+font-family: Quadranta;
+font-weight: bold;
+src: url("../fonts/Quadranta-Bold.otf") format("opentype");
+}
+
+/*HEADER - FOOTER*/
+.navbar-default {
+    background-color: #00324c;
+}
+
+.navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li.dropdown > a:focus {
+    background-color: #00324c;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li.active > a, .navbar-default .navbar-nav > li:hover > a, .navbar-default .navbar-nav > li.active > a:hover {
+    background-color: #00324c;
+}
+.footer {
+background-color: #00324c;
+}
+.nav > li > a.login{
+  color:#f56363;
+}
+
+
+/*BUTTONS*/
+.btn{
+    border-radius: 0;
+}
+
+a.btn.btn-white{
+    color: #f56363;
+    background-color: #fff  !important;
+   /* border: solid 1px #fff;*/
+}
+.btn.btn-white:hover{
+    /*border: solid 1px #f56363;*/
+    background-color: #50AECB  !important;
+    color: #fff;
+}
+
+.btn.btn-primary{
+    background-color: #f56363  !important;
+}
+
+.btn.btn-primary:hover{
+     background-color: #2a7ca1  !important;
+     color: #fff;
+}
+
+.navbar .social-icons {
+    background-color: #00324c;
+}
+.navbar .social-icons a > i:hover{
+    background-color: #2a7ca1;
+}
+
+/* MODAL  */
+
+.modal-content{
+    border-radius:0px;
+}
+
+.modal-header, .modal-footer{
+    border-bottom: 0px solid #fff;
+     border-top: 0px solid #fff;
+}
+
+/*TEXT*/
+.ds-logo-large {
+    font-size:90px;
+   // line-height:60px;
+    font-weight:800;
+    font-family:"Quadranta";
+    text-decoration:none;
+    background-color:transparent;
+    border-width:0px;
+    border-color:rgb(255, 214, 88);
+    border-style:none;
+    text-transform:capitalize;
+    margin-bottom:20px;
+}
+
+.ds-logo-large.blue{
+    color:#50AECB;
+    /*size:64px !important;
+    color: #222;*/
+    text-shadow:  0px 1px 1px rgba(0, 0, 0, 1);
+    resize:none;
+    z-index:1000;
+
+}
+
+a.header{
+  color: #f56363;
+}
+a.header:hover{
+  color:  #53B0CB;
+}
+
+/* SPINNERS */
+.spinner {
+  margin: 100px auto 0;
+  width: 70px;
+  text-align: center;
+}
+
+.spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: #50AECB;
+
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+  animation: bouncedelay 1.4s infinite ease-in-out;
+  /* Prevent first frame from flickering when animation starts */
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0.0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes bouncedelay {
+  0%, 80%, 100% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 40% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+
+/* MEDIA  QUERIES */
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+/* Styles */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen
+and (min-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen
+and (max-width : 540px) {
+
+    .ds-logo-large{
+        font-size: 50px;
+    }
+
+    .medium-caption{
+        font-weight: bold;
+
+    }
+    .navbar-brand #logo{
+        width: 241px;
+        height: 40px;
+        margin-top:3px;
+        margin-left:5px;
+    }
+
+    .ds-logo-large{
+      /*top:-200px;*/
+      margin-top: 100px !important;
+
+    }
+    .parallax, .img-overlay3, .img-overlay-solid{
+       background-attachment: scroll;/**/
+      background-position: top;
+      -webkit-background-size: auto;
+      -moz-background-size: auto;
+      background-size: auto;/**/
+      background-repeat: no-repeat;
+    }
+
+   .img-overlay-solid{
+      display:none;
+   }
+
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+  .parallax, .img-overlay3, .img-overlay-solid{
+   background-attachment: scroll;/**/
+  background-position: top;
+  -webkit-background-size: auto;
+  -moz-background-size: auto;
+  background-size: auto;/**/
+  background-repeat: no-repeat;
+  }
+  .img-overlay-solid{
+    display:none;
+  }
+/* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+/* Styles */
+.medium-caption{
+        font-weight: bold;
+
+    }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen
+and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen
+and (min-width : 1824px) {
+/* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+}

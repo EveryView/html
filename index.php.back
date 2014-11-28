@@ -1,0 +1,213 @@
+<?php
+session_start();
+require_once 'Google/Client.php';
+require_once 'Google/Service/YouTubeAnalytics.php';
+require_once 'Google/Service/YouTube.php';
+require_once 'Google/Service/Urlshortener.php';
+require_once 'videosFromChannel.php';
+$client = new Google_Client();
+
+if (isset($_GET['logout'])) {
+    unset($_SESSION['user']);
+
+}
+
+if (!isset($_SESSION['user'])) {
+    echo '<html>
+<head>
+    <title>Youtube Metrics</title>
+    <link href="./css/bootstrap.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="./js/bootstrap.js"></script>
+</head>
+<body>';
+    echo '<div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="index.php">YouTube Metrics</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="login.php">Sign In</a></li>
+              <li><a href="registration.php">Sign Up</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div><br><br><br><br><div class="alert" style="width: 900px; margin: 0 auto;">You are not logged in, use the <a href="login.php">Sign In</a> to sign in or <a href="registration.php">Sign Up</a> to sing up</div>
+</body></html>';
+} else {
+    echo '<html>
+<head>
+    <title>Youtube Metrics</title>
+    <meta charset="UTF-8">
+    <link href="./css/bootstrap.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="./js/bootstrap.js"></script>
+<script src="./js/report.js">
+</script>
+	<script type="text/javascript">
+	$(function() {
+		$("#fsdfds").hide();
+		});
+		function addChannel() {
+		//todo: show loader
+		$("#fsdfds").css("display", "inline");
+		$("body").append(\'<iframe id="logoutframe" src="https://accounts.google.com/logout" style="display: none"></iframe>\');
+		setTimeout(function() {
+			window.location.href = "index.php?addChannel=1";
+		}, 5000);
+	
+    }
+</script>
+
+</head>
+<body>';
+    echo '<div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="index.php">YouTube Metrics</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="index.php?logout=1">Logout</a></li>
+              <li><a href="javascript:addChannel()" id="addChannel"><nobr>Add Channel<span id="fsdfds" style="display:none"><img src="img/ajax-spinner.gif" width="16" height="16"/></span></nobr></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div><br><br><br><br>';
+    $userChannelsTokens = getUserChannelsTokens($_SESSION['user']);
+    if (isset($_SESSION['error'])) {
+        echo '<div class="alert" style="width: 900px; margin: 0 auto;">' . $_SESSION['error'] . '</div>';
+        unset($_SESSION['error']);
+    }
+    if (count($userChannelsTokens) == 0) {
+        echo '<div class="alert" style="width: 900px; margin: 0 auto;">You do not have the channel, use the button <a href="index.php?addChannel=1">Add Channel</a> to add a new channel</div>';
+    } else {
+        printUserChannels($client, getUserChannelsTokens($_SESSION['user']));
+    }
+}
+
+if (isset($_GET['code'])) {
+    $client->authenticate($_GET['code']);
+    $accessToken = $client->getAccessToken();
+    if (isset(json_decode($accessToken)->refresh_token)) {
+        $service = new Google_Service_YouTube($client);
+        $data = $service->channels->listChannels('snippet', array('mine' => 'true',));
+        $channelId = $data->items[0]->id;
+        addToken($accessToken, $channelId, $_SESSION['user']);
+    } else {
+        $service = new Google_Service_YouTube($client);
+        $data = $service->channels->listChannels('snippet', array('mine' => 'true',));
+        $channelId = $data->items[0]->id;
+        $token = getTokenByChannel($channelId);
+        if ($token) {
+            if ($token['user_id'] != $_SESSION['user']) {
+                addToken($token['token'], $token['channel_id'], $_SESSION['user']);
+            }
+        } else {
+            $_SESSION['error'] = "Can't get access token, please try again later.";
+
+        }
+    }
+    $redirect = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'];
+    header('Location: ' . filter_var($redirect, FILTER_SANITIZE_URL));
+}
+if (isset($_GET['addChannel'])) {
+    redir_auth($client);
+}
+
+function getUserChannelsTokens($userId)
+{
+    $link = mysql_connect('localhost', 'root', 'GProsl_2014');
+    mysql_select_db('ytmetrics');
+    $result_tokens = array();
+    $query = "SELECT * FROM tokens where user_id = '$userId'";
+    $result = mysql_query($query);
+    $i = 0;
+    while ($line = mysql_fetch_array($result, MYSQL_ASSOC)) {
+        $result_tokens[$i] = $line;
+        $i++;
+    }
+    mysql_free_result($result);
+    mysql_close($link);
+    return $result_tokens;
+}
+
+function printUserChannels($client, $userChannelTokens)
+{
+    echo '<div class="container">';
+    foreach ($userChannelTokens as $token) {
+        $client->setAccessToken($token['token']);
+        $service = new Google_Service_YouTube($client);
+        $data = $service->channels->listChannels('snippet', array('mine' => 'true',));
+        $imgUrl = $data->items[0]->snippet['modelData']['thumbnails']['default']['url'];
+        $channelName = $data->items[0]->snippet['title'];
+        $channelId = $data->items[0]->id;
+        echo '<div><h2><a href = "https://www.youtube.com/channel/' . $channelId . '">
+        <img src="' . $imgUrl . '" width="28" height="28">' . $channelName . '</img></a></h2>';
+        echo '<form method="get" action="metrics.php" target="_blank">
+        <label>Country &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <select name="country">
+	    <option value="">ALL</option>
+        <option value="US">USA</option>
+        <option value="UA">Ukraine</option></select>';
+        echo '<label>Video &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><select name="video_id">
+        <option value="">ALL</option>';
+        $videos = getVideosFromChannel($channelId);
+        foreach($videos as $video){
+            echo '<option value="'.$video['id'].'">'.$video['title'].'</option>';
+        }
+        echo '</select>';
+        echo '<p>Daily Report (<a href="#">csv</a>, <a href="#">xml</a>)</p>
+        <p>Weekly Report (<a href="#">csv</a>, <a href="#">xml</a>)</p>
+        <p>Monthly Report (<a href="#">csv</a>, <a href="#">xml</a>)</p>
+	<div><p>Videos Report (<a href="videoMetrics.php?type=csv&token_id='.$token['id'].' " target="_blank" >csv</a>, <a href="videoMetrics.php?type=xml&token_id='.$token['id'].'" target="_blank">xml</a>)</p></div>';
+        echo '
+        <input type="hidden" name="time" value="">
+        <input type="hidden" name="type" value="">
+        <input type="hidden"  value="'.$token['id'].'" name="token_id"><br>
+        </form></div >';
+    }
+    echo '</div > ';
+}
+
+function addToken($accessToken, $channelId, $user)
+{
+    $link = mysql_connect('localhost', 'root', 'GProsl_2014');
+    mysql_select_db('ytmetrics');
+    $query = "INSERT INTO tokens(`token`,`channel_id`,`user_id`) VALUES ('$accessToken','$channelId','$user')";
+    print_r($query);
+    mysql_query($query);
+    mysql_close($link);
+}
+
+function redir_auth($client)
+{
+    $client->setScopes("https://www.googleapis.com/auth/yt-analytics.readonly");
+    $client->addScope('https://gdata.youtube.com');
+    $client->setAccessType("offline");
+    $url = $client->createAuthUrl();
+    header("location: $url");
+}
+
+function getTokenByChannel($channelId)
+{
+    $link = mysql_connect('localhost', 'root', 'GProsl_2014');
+    mysql_select_db('ytmetrics');
+    $query = "SELECT * FROM tokens WHERE `channel_id` = '$channelId'";
+    $result = mysql_query($query);
+    $line = mysql_fetch_array($result, MYSQL_ASSOC);
+    mysql_free_result($result);
+    mysql_close($link);
+    return $line;
+}
