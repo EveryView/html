@@ -1,0 +1,1322 @@
+
+/* CSS document */
+
+/*a, abbr, acronym, address, applet, article, aside, audio, b, blockquote, big, body, center, canvas, caption, cite, code, command, datalist, dd, del, details, dfn, dl, div, dt, em, embed, fieldset, figcaption, figure, font, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, keygen, label, legend, li, meter, nav, object, ol, output, p, pre, progress, q, s, samp, section, small, span, source, strike, strong, sub, sup, table, tbody, tfoot, thead, th, tr, tdvideo, tt, u, ul, var { padding:0px; margin:0px; border:none; list-style:none; text-decoration:none; }*/
+
+body {
+	background:#ffffff;
+	font-weight:normal;
+}
+
+html, body { 
+	width:100%;
+	height:auto;
+}
+
+* {
+	margin:0px;
+   	padding:0px;
+	/*border:none;
+	list-style:none;
+	text-decoration:none;*/
+}
+
+ul, ol {
+	margin:0px !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin:0px !important;
+}
+
+p {
+	margin:0px !important;
+}
+
+h1 {
+	font-size:36px;
+	color:#000000;
+	line-height:42px;
+	font-weight:normal;
+}
+
+h2 {
+	font-size:30px;
+	color:#000000;
+	line-height:36px;
+	font-weight:normal;
+}
+
+h3 {
+	font-size:24px;
+	color:#000000;
+	line-height:30px;
+	font-weight:normal;
+}
+
+h4 {
+	font-size:18px;
+	color:#000000;
+	line-height:24px;
+	font-weight:normal;
+}
+
+h5 {
+	font-size:14px;
+	color:#000000;
+	line-height:20px;
+	font-weight:normal;
+}
+
+h6 {
+	font-size:12px;
+	color:#000000;
+	line-height:18px;
+	font-weight:normal;
+}
+
+p {
+	font-size:14px;
+	color:#000000;
+	line-height:24px;
+	font-weight:normal;
+}
+
+a {
+	font-weight:normal;
+}
+
+a:hover {
+	text-decoration:none;
+}
+
+label {
+    margin-bottom:5px;
+}
+
+/*...... start col_0 ............*/
+
+.col_0 {
+	padding:0px;
+	/*overflow:hidden;*/
+}
+
+/*...... start row ............*/
+
+.row_0 {
+	margin:0px;
+	/*overflow:hidden;*/
+}
+
+.AutoWrapper {
+	width:100%;
+	margin:0 auto;
+}
+
+/*...... start header_cmn ....................................*/
+
+header {
+	width:100%;
+	height:auto;
+}
+
+/*...... start container_cmn ....................................*/
+
+section {
+	width:100%;
+	height:auto;
+}
+
+.FullContainerSection {
+	width:100%;
+	height:auto;
+}
+
+/*...... start login ............*/
+
+.LoginBlk1Gap {
+	margin-top:4% !important;
+}
+
+.ResetPasswordBlk1Gap {
+	margin-top:8% !important;
+}
+
+.ChangePasswordBlk1Gap {
+	margin-top:8% !important;
+}
+
+.LoginBlk1 {
+	max-width:400px;
+	margin:0 auto;
+	padding:50px;
+	background-color: rgba(0, 0, 0, 0.47);
+	/*background:#1c3147;*/
+	/*box-shadow:0 0 10px 5px #333333;*/
+	overflow:hidden;
+}
+
+.LoginBlk1 img {
+	margin-bottom:30px;
+}
+
+.LoginBlk1 .form-group {
+	overflow:hidden;
+	margin-bottom:45px;
+}
+
+.LoginBlk1 .form-group:last-child {
+	margin-bottom:0px;
+}
+
+.LoginBlk1 .form-control-feedback {
+  top:0px;
+  left:0px;
+  color:#ffffff;
+  border:1px solid #cccccc;
+  border-radius:50px;
+}
+
+.LoginBlk1 .has-feedback .form-control {
+    padding-right: 12px;
+	padding-left:42.5px;
+}
+
+.FormControl1 {
+	height:40px;
+	font-size:18px;
+	color:#ffffff;
+	line-height:40px;
+	font-weight:normal;
+	border:none;
+	border-radius:0px;
+	box-shadow:none;
+	background:transparent;
+	border-bottom:1px solid #cccccc !important;
+}
+
+.FormControl1:focus {
+	border-color:none;
+	box-shadow:none;
+}
+
+.FormControl1::-moz-placeholder {
+	color:#ffffff;
+	text-transform:uppercase;
+}
+
+.LoginBlk1 p.text-center {
+	/*font-size:13px;*/
+   color:#ffffff;
+   line-height:28px;
+   background:#fe0000;
+   margin-bottom:25px !important;
+}
+
+.LoginBlk1 p.text-center span {
+	font-size:10px;
+	font-weight:normal;
+	padding-right:5px;
+}
+
+.LoginBlk1 p.TextCenter1 {
+	/*font-size:13px;*/
+   color:#ffffff;
+   line-height:20px;
+   text-align:center;
+   margin-bottom:25px !important;
+}
+
+.LoginBlk1 p.TextCenter2 {
+	/*font-size:13px;*/
+   color:#ffffff;
+   line-height:28px;
+   text-align:center;
+   background:#5cb85c;
+   margin-bottom:25px !important;
+}
+
+.LoginBlk1 p.TextCenter2 span {
+	font-size:10px;
+	font-weight:normal;
+	padding-right:5px;
+}
+
+.FormText1 {
+	width:100%;
+	display:block;
+	text-align:center;
+	overflow:hidden;
+}
+
+.FormText1 p {
+	color:#ffffff;
+	margin-top:5px !important;
+}
+
+.FormText1 p a {
+	color:#ffffff;
+}
+
+.FormText1 p a:hover {
+	color:#fe0000;
+}
+
+.FormText1 a {
+	color:#ffffff;
+}
+
+.FormText1 a:hover {
+	color:#fe0000;
+}
+
+/*...... start signup ............*/
+
+.SignupBlk1Gap {
+	margin-top:1% !important;
+}
+
+.SignupBlk1 {
+	max-width:600px;
+	margin:0 auto;
+	padding:30px;
+	background-color: rgba(0, 0, 0, 0.47);
+	/*background:#1c3147;*/
+	/*box-shadow:0 0 10px 5px #333333;*/
+	overflow:hidden;
+}
+
+.SignupBlk1 img {
+	margin-bottom:30px;
+}
+
+.SignupBlk1 p.text-center {
+	/*font-size:13px;*/
+   color:#ffffff;
+   line-height:28px;
+   background:#fe0000;
+   margin-bottom:25px !important;
+}
+
+.SignupBlk1 p.text-center span {
+	font-size:10px;
+	font-weight:normal;
+	padding-right:5px;
+}
+
+.SignupBlk1 .form-group {
+	overflow:hidden;
+	margin-bottom:30px;
+}
+
+.SignupBlk1 .form-group:last-child {
+	margin-bottom:0px;
+}
+
+.FormControl2 {
+	font-size:18px;
+	color:#ffffff;
+	font-weight:normal;
+	border:none;
+	border-radius:0px;
+	box-shadow:none;
+	background:transparent;
+	border-bottom:1px solid #cccccc !important;
+}
+
+.FormControl2:focus {
+	border-color:none;
+	box-shadow:none;
+}
+
+.FormControl2::-moz-placeholder {
+	color:#ffffff;
+	text-transform:uppercase;
+}
+
+.SignUpFN1 {
+	padding-left:0px;
+}
+
+.SignUpLN1 {
+	padding-right:0px;
+}
+
+/*...... start admin ............*/
+
+.AdminHeaderBlk1 {
+	padding-top:15px;
+	padding-bottom:15px;
+	background:#2f2f2f;
+}
+
+.LogoMain {
+	display:block;
+	float:none;
+	text-align:left;
+}
+
+.LogoMain a {
+	outline:0;
+}
+
+.LogoMain a img {
+	max-width: 100%;
+	height: auto;
+}
+
+.AdminTab1 {
+	float:right;
+	border-bottom:none;
+	margin-top:10px !important;
+}
+
+.AdminTab1 li {
+	margin-bottom:0px;
+}
+
+.AdminTab1 li a {
+	border:none;
+	border-radius:0px;
+	color:#ffffff;
+	line-height:20px;
+	margin-right:0px;
+	background-color:#080808;
+}
+
+.AdminTab1 li a:hover, AdminTab1 li a:focus {
+	/*background-color:#080808;*/
+	background-color:#080808;
+}
+
+.AdminTab1 > li > a:hover,
+.AdminTab1 > li > a:focus {
+	/*background-color:#080808;*/
+	background-color:#080808;
+}
+
+.AdminTab1 .open > a,
+.AdminTab1 .open > a:hover,
+.AdminTab1 .open > a:focus {
+	/*background-color:#080808;*/
+	background-color:#080808;
+}
+
+.AdminTab1 ul.ADropdownMenu1 {
+	right:0px !important;
+	left:auto !important;
+	border:none;
+	padding:0px;
+	border-radius:0px;
+	background-color:#080808;
+}
+
+.AdminTab1 ul.ADropdownMenu1 li {
+	margin-bottom:3px;
+}
+
+.AdminTab1 ul.ADropdownMenu1 li:last-child {
+	margin-bottom:0px;
+}
+
+.AdminTab1 ul.ADropdownMenu1 li a {
+	line-height:20px;
+	padding-top:6px;
+	padding-bottom:6px;
+}
+
+.AdminTab1 ul.ADropdownMenu1 li a:hover {
+	color:#2a6496;
+}
+
+.AdminTextBlk1 {
+	padding-top:30px;
+	padding-bottom:15px;
+}
+
+.AdminTextBlk1 h3 {
+	text-align:center;
+}
+
+.AdminInnerBlk1 {
+	padding-top:15px;
+	padding-bottom:15px;
+	max-width:320px;
+	margin:auto;
+}
+
+.AdminInnerBlk1 ul.list-unstyled {
+	
+}
+
+.AdminInnerBlk1 ul.list-unstyled form {
+	margin-bottom:15px !important;
+}
+
+.AdminInnerBlk1 ul.list-unstyled li {
+	list-style:inside upper-roman;
+	margin-bottom:15px;
+}
+
+.AdminInnerBlk1 ul.list-unstyled li a {
+	text-decoration:none;
+	outline:0;
+}
+
+.AdminInnerBlk1 ul.list-unstyled li a.youtube1 {
+	padding-left:34px;
+	background:url(../images/youtube.png) no-repeat left center;
+}
+
+.AdminInnerBlk1 ul.list-unstyled li a.aol1 {
+	padding-left:36px;
+	background:url(../images/aol-1.png) no-repeat left center;
+}
+
+.AdminInnerBlk1 ul.list-unstyled li:last-child {
+	margin-bottom:0px;
+}
+
+.AdminInnerBlk1 ul.list-unstyled li a {
+	font-size:16px;
+	color:#333333;
+}
+
+.AdminInnerBlk1 ul.list-unstyled li a:hover {
+	color:#2a6496;
+}
+
+.AdminInnerBlk1 ul.list-unstyled li a .modal {
+	overflow:hidden;
+	color:#333333;
+}
+
+.AdminInnerBlk1 ul.list-unstyled li a .modal-header h4 {
+	font-size:20px;
+}
+
+.AdminInnerBlk1 ul.list-unstyled li a .modal-content label {
+	font-size:14px;
+}
+
+.AdminInnerBlk1 ul.list-unstyled li a .BtnModal1 {
+	font-size:16px;
+	color:#333333;
+	line-height:34px;
+	border:none;
+	border-radius:0px;
+	box-shadow:none;
+	padding:0px;
+	outline:0;
+	background:none;
+}
+
+.AdminInnerBlk1 ul.list-unstyled li a .BtnModal1:hover {
+	color:#2a6496;
+}
+
+.AdminInnerBlk1 ul.list-unstyled li a .BtnModal1 span {
+	color:#2a6496;
+	padding-right:6px;
+}
+
+.AdminInnerBlk1 ul.list-unstyled li a span.BMT1 {
+	color:#00ff00;
+	cursor:none !important;
+}
+
+
+
+/*...... start footer_cmn ....................................*/
+
+footer {
+	width:100%;
+	height:auto;
+}
+
+
+
+/*.................................... start bootstrap fix ....................................*/
+
+#BodyBg1 {
+	background-attachment:fixed;
+	background-color:#ffffff;
+	background-image:url(../images/turingmachine.png);
+	background-position:50% 0%;
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+
+/*...... start NavbarWrapperPosition ......*/
+
+.NavbarWrapperBg1 {
+    background:#00324c;
+}
+
+/*...... start navbar logo ............*/
+
+.navbar-brand {
+  float: left;
+  height: auto !important;
+  padding: 0px !important;
+  margin:10px 0px 0px 0px !important;
+  font-size:20px;
+  line-height:20px;
+}
+
+.navbar-brand img {
+  display: block;
+  width: 100% \9;
+  max-width: 100%;
+  height: auto;
+}
+
+/*...... start navbar ............*/
+
+.CustomNavbar1 {
+	margin:0px;
+	border-top:0px;
+	border-bottom:0px;
+	border-left:0px;
+	border-right:0px;
+	border-radius:0px;
+	box-shadow:none;
+	background:#00324c;
+}
+
+.NavbarWrapperBg1 .container-fluid {
+	height:auto;
+	/*padding-left:0px;
+	padding-right:0px;*/
+}
+
+.CustomNavbar1 .container {
+	height:auto;
+	/*width:100%;*/
+	padding-left:0px;
+	padding-right:0px;
+}
+
+.CustomNavbarCollapse1 {
+	height:auto;
+	width:auto;
+	padding-left:0px;
+	padding-right:0px;
+}
+
+.CustomNavbarNav1 {
+	width:auto;
+	margin:0px;
+	padding:0px;
+}
+
+.CustomNavbarCollapse1 .CustomNavbarNav1 > li {
+	width:auto;
+	text-align:left;
+	background:none;
+}
+
+.CustomNavbarCollapse1 .CustomNavbarNav1 > li:first-child {
+	/*margin-left:0px;*/
+}
+
+.CustomNavbarCollapse1 .CustomNavbarNav1 > li:last-child {
+	/*margin-right:0px;*/
+	/*border-right:none;*/
+	/*background:none;*/
+}
+
+.CustomNavbarCollapse1 .CustomNavbarNav1 > li > a {
+	font-size:14px;
+	font-family:sans-serif !important;
+	color:#bbb;
+	line-height:20px;
+	font-weight:500;
+	text-align:left;
+	text-transform:uppercase;
+	background:#00324c;
+	outline:0;
+	padding-top:25px;
+	padding-bottom:25px;
+	text-shadow:0px 0px 1px rgba(0, 0, 0, 0.01);
+	/*padding-left:22px;
+	padding-right:22px;*/
+}
+
+.CustomNavbarCollapse1 .CustomNavbarNav1 > li > a:hover,
+.CustomNavbarCollapse1 .CustomNavbarNav1 > li.active > a,
+.CustomNavbarCollapse1 .CustomNavbarNav1 > li.active > a:hover {
+	color:#ffffff;
+	background:#00324c;
+}
+
+.CustomNavbarCollapse1 .CustomNavbarNav1 > li > a:focus {
+	color:#ffffff;
+	background:#00324c;
+}
+
+.DropdownMenu1 {
+	width:auto !important;
+    background:#00324c !important;
+    border-radius:0px;
+	box-shadow:none;
+	border:none;
+	padding:0px 0px 0px 0px;
+	left:auto !important;
+}
+
+.DropdownMenu1 li {
+	width:auto !important;
+	border-bottom:1px solid #bbb;
+}
+
+.DropdownMenu1 li a {
+    font-size:14px;
+	font-family:sans-serif !important;
+	color:#bbb !important;
+	padding:5px 20px 5px 20px !important;
+	text-align:left;
+	text-shadow:0px 0px 1px rgba(0, 0, 0, 0.01);
+	outline:0;
+}
+
+.DropdownMenu1 li a:hover {
+	color:#ffffff !important;
+	background:none;
+}
+
+/* for navbar hover */
+
+/*ul.nav li.dropdown:hover ul.dropdown-menu{
+    display: block;    
+}
+
+a.menu:after, .dropdown-toggle:after {
+  content: none;
+}*/
+
+/*...... end navbar ............*/
+
+
+/*----------------------------------------------------------------- condition for up responsive ----------------------------------------------------------*/
+
+/*------ condition for up 1200px ------------------------------------*/
+@media (min-width: 1200px) {
+
+
+
+}
+
+/*------ condition for 992px upto 1200px ------------------------------------*/
+@media (min-width: 992px) and (max-width: 1199px) {
+
+
+
+
+
+}
+
+/*------ condition for 768px upto 991px ------------------------------------*/
+@media (min-width: 768px) and (max-width: 991px) {
+
+
+
+
+
+}
+
+/*------ condition for 480px ------------------------------------*/
+@media screen and (min-width: 480px) and (max-width: 767px) {
+
+h1 {
+	font-size:22px;
+	color:#000000;
+	line-height:28px;
+	font-weight:normal;
+}
+
+h2 {
+	font-size:20px;
+	color:#000000;
+	line-height:26px;
+	font-weight:normal;
+}
+
+h3 {
+	font-size:18px;
+	color:#000000;
+	line-height:24px;
+	font-weight:normal;
+}
+
+h4 {
+	font-size:16px;
+	color:#000000;
+	line-height:22px;
+	font-weight:normal;
+}
+
+h5 {
+	font-size:14px;
+	color:#000000;
+	line-height:20px;
+	font-weight:normal;
+}
+
+h6 {
+	font-size:12px;
+	color:#000000;
+	line-height:18px;
+	font-weight:normal;
+}
+
+/*.................................... start bootstrap fix ....................................*/
+
+/*...... start NavbarWrapperPosition ......*/
+
+.NavbarWrapperBg1 {
+    
+}
+
+/*...... start navbar logo ............*/
+
+.navbar-brand {
+  
+}
+
+.navbar-brand img {
+  display: block;
+  width: 240px;
+  height: auto;
+  padding-left:10px;
+}
+
+/*...... start navbar ............*/
+
+.CustomNavbar1 {
+	
+}
+
+.NavbarWrapperBg1 .container-fluid {
+	
+}
+
+.CustomNavbar1 .container {
+	
+}
+
+.CustomNavbarCollapse1 {
+	
+}
+
+.CustomNavbarNav1 {
+	
+}
+
+.CustomNavbarCollapse1 .CustomNavbarNav1 > li {
+	
+}
+
+.CustomNavbarCollapse1 .CustomNavbarNav1 > li:first-child {
+	
+}
+
+.CustomNavbarCollapse1 .CustomNavbarNav1 > li:last-child {
+	
+}
+
+.CustomNavbarCollapse1 .CustomNavbarNav1 > li > a {
+	padding-top:15px;
+	padding-bottom:15px;
+}
+
+.CustomNavbarCollapse1 .CustomNavbarNav1 > li > a:hover,
+.CustomNavbarCollapse1 .CustomNavbarNav1 > li.active > a,
+.CustomNavbarCollapse1 .CustomNavbarNav1 > li.active > a:hover {
+	
+}
+
+.CustomNavbarCollapse1 .CustomNavbarNav1 > li > a:focus {
+	
+}
+
+.DropdownMenu1 {
+	width:auto !important;
+}
+
+.DropdownMenu1 li {
+	
+}
+
+.DropdownMenu1 li a {
+	padding:8px 10px 8px 30px !important;
+}
+
+.DropdownMenu1 li a:hover {
+	
+}
+
+.navbar-inverse .navbar-collapse,
+.navbar-inverse .navbar-form {
+	border-color:#bbb;
+}
+
+.navbar-toggle .icon-bar {
+  width: 18px;
+}
+
+.navbar-toggle {
+  position: relative;
+  float: right;
+  padding: 12px 10px;
+  margin-top: 12px;
+  margin-right: 15px;
+  margin-bottom: 10px;
+  background-color: transparent;
+  background-image: none;
+  border: 2px solid #ffffff !important;
+  border-radius: 60px;
+}
+
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+  background-color: #f56363 !important;
+  border: 2px solid #f56363 !important;
+}
+
+/* for navbar hover */
+
+/*ul.nav li.dropdown:hover ul.dropdown-menu{
+    display: block;    
+}
+
+a.menu:after, .dropdown-toggle:after {
+  content: none;
+}*/
+
+/*...... end navbar ............*/
+
+.LoginBlk1 {
+	padding:15px;
+}
+
+.SignUpFN1 {
+	padding-left:0px;
+	padding-right:0px;
+	margin-bottom:30px;
+}
+
+.SignUpLN1 {
+	padding-right:0px;
+	padding-left:0px;
+}
+
+/*...... start admin ............*/
+
+.LogoMain {
+	text-align:center;
+}
+
+
+}
+
+/*------ condition for 320px ------------------------------------*/
+@media screen and (min-width: 320px) and (max-width: 479px) {
+
+h1 {
+	font-size:22px;
+	color:#000000;
+	line-height:28px;
+	font-weight:normal;
+}
+
+h2 {
+	font-size:20px;
+	color:#000000;
+	line-height:26px;
+	font-weight:normal;
+}
+
+h3 {
+	font-size:18px;
+	color:#000000;
+	line-height:24px;
+	font-weight:normal;
+}
+
+h4 {
+	font-size:16px;
+	color:#000000;
+	line-height:22px;
+	font-weight:normal;
+}
+
+h5 {
+	font-size:14px;
+	color:#000000;
+	line-height:20px;
+	font-weight:normal;
+}
+
+h6 {
+	font-size:12px;
+	color:#000000;
+	line-height:18px;
+	font-weight:normal;
+}
+
+/*.................................... start bootstrap fix ....................................*/
+
+/*...... start NavbarWrapperPosition ......*/
+
+.NavbarWrapperBg1 {
+    
+}
+
+/*...... start navbar logo ............*/
+
+.navbar-brand {
+  
+}
+
+.navbar-brand img {
+  display: block;
+  width: 240px;
+  height: auto;
+  padding-left:10px;
+}
+
+/*...... start navbar ............*/
+
+.CustomNavbar1 {
+	
+}
+
+.NavbarWrapperBg1 .container-fluid {
+	
+}
+
+.CustomNavbar1 .container {
+	
+}
+
+.CustomNavbarCollapse1 {
+	
+}
+
+.CustomNavbarNav1 {
+	
+}
+
+.CustomNavbarCollapse1 .CustomNavbarNav1 > li {
+	
+}
+
+.CustomNavbarCollapse1 .CustomNavbarNav1 > li:first-child {
+	
+}
+
+.CustomNavbarCollapse1 .CustomNavbarNav1 > li:last-child {
+	
+}
+
+.CustomNavbarCollapse1 .CustomNavbarNav1 > li > a {
+	padding-top:15px;
+	padding-bottom:15px;
+}
+
+.CustomNavbarCollapse1 .CustomNavbarNav1 > li > a:hover,
+.CustomNavbarCollapse1 .CustomNavbarNav1 > li.active > a,
+.CustomNavbarCollapse1 .CustomNavbarNav1 > li.active > a:hover {
+	
+}
+
+.CustomNavbarCollapse1 .CustomNavbarNav1 > li > a:focus {
+	
+}
+
+.DropdownMenu1 {
+	width:auto !important;
+}
+
+.DropdownMenu1 li {
+	
+}
+
+.DropdownMenu1 li a {
+	padding:8px 10px 8px 30px !important;
+}
+
+.DropdownMenu1 li a:hover {
+	
+}
+
+.navbar-inverse .navbar-collapse,
+.navbar-inverse .navbar-form {
+	border-color:#bbb;
+}
+
+.navbar-toggle .icon-bar {
+  width: 18px;
+}
+
+.navbar-toggle {
+  position: relative;
+  float: right;
+  padding: 12px 10px;
+  margin-top: 12px;
+  margin-right: 15px;
+  margin-bottom: 10px;
+  background-color: transparent;
+  background-image: none;
+  border: 2px solid #ffffff !important;
+  border-radius: 60px;
+}
+
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+  background-color: #f56363 !important;
+  border: 2px solid #f56363 !important;
+}
+
+/* for navbar hover */
+
+/*ul.nav li.dropdown:hover ul.dropdown-menu{
+    display: block;    
+}
+
+a.menu:after, .dropdown-toggle:after {
+  content: none;
+}*/
+
+/*...... end navbar ............*/
+
+.container {
+	padding-left:0px;
+	padding-right:0px;
+}
+
+.LoginBlk1 {
+	padding:15px;
+}
+
+.SignUpFN1 {
+	padding-left:0px;
+	padding-right:0px;
+	margin-bottom:30px;
+}
+
+.SignUpLN1 {
+	padding-right:0px;
+	padding-left:0px;
+}
+
+/*...... start admin ............*/
+
+.LogoMain {
+	text-align:center;
+}
+
+}
+
+/*------ condition below 320px ------------------------------------*/
+@media screen and (min-width: 180px) and (max-width: 319px) {
+	
+h1 {
+	font-size:22px;
+	color:#000000;
+	line-height:28px;
+	font-weight:normal;
+}
+
+h2 {
+	font-size:20px;
+	color:#000000;
+	line-height:26px;
+	font-weight:normal;
+}
+
+h3 {
+	font-size:18px;
+	color:#000000;
+	line-height:24px;
+	font-weight:normal;
+}
+
+h4 {
+	font-size:16px;
+	color:#000000;
+	line-height:22px;
+	font-weight:normal;
+}
+
+h5 {
+	font-size:14px;
+	color:#000000;
+	line-height:20px;
+	font-weight:normal;
+}
+
+h6 {
+	font-size:12px;
+	color:#000000;
+	line-height:18px;
+	font-weight:normal;
+}
+
+/*.................................... start bootstrap fix ....................................*/
+
+/*...... start NavbarWrapperPosition ......*/
+
+.NavbarWrapperBg1 {
+    
+}
+
+/*...... start navbar logo ............*/
+
+.navbar-brand {
+  
+}
+
+.navbar-brand img {
+  display: block;
+  width: 200px;
+  height: auto;
+  padding-left:10px;
+}
+
+/*...... start navbar ............*/
+
+.CustomNavbar1 {
+	
+}
+
+.NavbarWrapperBg1 .container-fluid {
+	
+}
+
+.CustomNavbar1 .container {
+	
+}
+
+.CustomNavbarCollapse1 {
+	
+}
+
+.CustomNavbarNav1 {
+	
+}
+
+.CustomNavbarCollapse1 .CustomNavbarNav1 > li {
+	
+}
+
+.CustomNavbarCollapse1 .CustomNavbarNav1 > li:first-child {
+	
+}
+
+.CustomNavbarCollapse1 .CustomNavbarNav1 > li:last-child {
+	
+}
+
+.CustomNavbarCollapse1 .CustomNavbarNav1 > li > a {
+	padding-top:15px;
+	padding-bottom:15px;
+}
+
+.CustomNavbarCollapse1 .CustomNavbarNav1 > li > a:hover,
+.CustomNavbarCollapse1 .CustomNavbarNav1 > li.active > a,
+.CustomNavbarCollapse1 .CustomNavbarNav1 > li.active > a:hover {
+	
+}
+
+.CustomNavbarCollapse1 .CustomNavbarNav1 > li > a:focus {
+	
+}
+
+.DropdownMenu1 {
+	width:auto !important;
+}
+
+.DropdownMenu1 li {
+	
+}
+
+.DropdownMenu1 li a {
+	padding:8px 10px 8px 30px !important;
+}
+
+.DropdownMenu1 li a:hover {
+	
+}
+
+.navbar-inverse .navbar-collapse,
+.navbar-inverse .navbar-form {
+	border-color:#bbb;
+}
+
+.navbar-toggle .icon-bar {
+  width: 18px;
+}
+
+.navbar-toggle {
+  position: relative;
+  float: right;
+  padding: 12px 10px;
+  margin-top: 12px;
+  margin-right: 15px;
+  margin-bottom: 10px;
+  background-color: transparent;
+  background-image: none;
+  border: 2px solid #ffffff !important;
+  border-radius: 60px;
+}
+
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+  background-color: #f56363 !important;
+  border: 2px solid #f56363 !important;
+}
+
+/* for navbar hover */
+
+/*ul.nav li.dropdown:hover ul.dropdown-menu{
+    display: block;    
+}
+
+a.menu:after, .dropdown-toggle:after {
+  content: none;
+}*/
+
+/*...... end navbar ............*/
+
+.container {
+	padding-left:0px;
+	padding-right:0px;
+}
+
+.LoginBlk1 {
+	padding:15px;
+}
+
+.SignUpFN1 {
+	padding-left:0px;
+	padding-right:0px;
+	margin-bottom:30px;
+}
+
+.SignUpLN1 {
+	padding-right:0px;
+	padding-left:0px;
+}
+
+/*...... start admin ............*/
+
+.LogoMain {
+	text-align:center;
+}
+
+}
+
+
+

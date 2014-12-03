@@ -1,0 +1,20 @@
+[03-Nov-2014 11:56:42 America/Chicago] PHP Parse error:  syntax error, unexpected 'you' (T_STRING) in /home/debasish/public_html/rony/everyview/reset-password.php on line 34
+[03-Nov-2014 11:56:48 America/Chicago] PHP Parse error:  syntax error, unexpected 'you' (T_STRING) in /home/debasish/public_html/rony/everyview/reset-password.php on line 34
+[03-Nov-2014 11:56:53 America/Chicago] PHP Parse error:  syntax error, unexpected 'you' (T_STRING) in /home/debasish/public_html/rony/everyview/reset-password.php on line 34
+[03-Nov-2014 12:08:38 America/Chicago] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/debasish/public_html/rony/everyview/reset-password.php on line 34
+[03-Nov-2014 12:08:55 America/Chicago] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/debasish/public_html/rony/everyview/reset-password.php on line 34
+[03-Nov-2014 12:08:57 America/Chicago] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/debasish/public_html/rony/everyview/reset-password.php on line 34
+[03-Nov-2014 12:10:50 America/Chicago] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /home/debasish/public_html/rony/everyview/reset-password.php on line 34
+[03-Nov-2014 13:20:09 America/Chicago] PHP Parse error:  syntax error, unexpected '<' in /home/debasish/public_html/rony/everyview/forget-password.php on line 57
+[12-Nov-2014 10:59:55 America/Chicago] PHP Parse error:  syntax error, unexpected 'text' (T_STRING) in /home/debasish/public_html/client/reset-password.php on line 43
+[12-Nov-2014 11:00:47 America/Chicago] PHP Parse error:  syntax error, unexpected 'text' (T_STRING) in /home/debasish/public_html/client/reset-password.php on line 43
+[12-Nov-2014 11:00:50 America/Chicago] PHP Parse error:  syntax error, unexpected 'text' (T_STRING) in /home/debasish/public_html/client/reset-password.php on line 43
+[12-Nov-2014 11:00:56 America/Chicago] PHP Parse error:  syntax error, unexpected 'text' (T_STRING) in /home/debasish/public_html/client/reset-password.php on line 43
+[12-Nov-2014 11:01:34 America/Chicago] PHP Parse error:  syntax error, unexpected 'text' (T_STRING) in /home/debasish/public_html/client/reset-password.php on line 43
+[12-Nov-2014 11:01:37 America/Chicago] PHP Parse error:  syntax error, unexpected 'text' (T_STRING) in /home/debasish/public_html/client/reset-password.php on line 43
+[12-Nov-2014 11:01:41 America/Chicago] PHP Parse error:  syntax error, unexpected 'text' (T_STRING) in /home/debasish/public_html/client/reset-password.php on line 43
+[12-Nov-2014 11:02:06 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home/debasish/public_html/client/reset-password.php on line 44
+[12-Nov-2014 11:02:08 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home/debasish/public_html/client/reset-password.php on line 44
+[12-Nov-2014 11:02:29 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home/debasish/public_html/client/reset-password.php on line 44
+[12-Nov-2014 11:02:32 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home/debasish/public_html/client/reset-password.php on line 44
+[12-Nov-2014 11:05:43 America/Chicago] PHP Parse error:  syntax error, unexpected 'text' (T_STRING) in /home/debasish/public_html/client/reset-password.php on line 43
